@@ -20,6 +20,9 @@ app.get('/', (req, res, next) => {
     res.sendFile(path.join(__dirname+'/index.html'));
 })
 
+app.get('/ejsa', (req, res) => {
+    res.render('pages/index');
+})
 
 app.listen(PORT, ()=> {
     console.log(`The app is running on ${PORT}`);
