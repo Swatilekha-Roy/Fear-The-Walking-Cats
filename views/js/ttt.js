@@ -540,10 +540,18 @@ function checkWin() {
                 score.computer++;
                 winner = computer;
                 // console.log("computer wins");
+                setTimeout(function () {
+                  res.redirect('/index.html');
+                  }
+                , 5000);
             } else {
                 score.player++;
                 winner = player;
                 // console.log("player wins");
+                setTimeout(function () {
+                  res.redirect('/index.html');
+                  }
+                , 5000);
             }
             // Give the winning row/column/diagonal a different bg-color
             var tmpAr = myGrid.getDiagIndices(i);
@@ -572,6 +580,7 @@ function announceWinner(text) {
     document.getElementById("winText").innerHTML = text;
     document.getElementById("winAnnounce").style.display = "block";
     setTimeout(closeModal, 1400, "winAnnounce");
+
 }
 
 function askUser(text) {
@@ -649,5 +658,5 @@ function endGame(who) {
         var id = "cell" + i.toString();
         document.getElementById(id).style.cursor = "default";
     }
-    setTimeout(restartGame, 800);
+    setTimeout(function(){ res.redirect('/'); }, 3000);
 }
