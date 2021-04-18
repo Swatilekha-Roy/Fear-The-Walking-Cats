@@ -24,6 +24,10 @@ app.get('/ejsa', (req, res) => {
     res.render('pages/index');
 })
 
+app.get('/game', (req, res) => {
+    res.sendFile(path.join(__dirname+'/ttt.html'));
+})
+
 app.listen(PORT, ()=> {
     console.log(`The app is running on ${PORT}`);
 });
