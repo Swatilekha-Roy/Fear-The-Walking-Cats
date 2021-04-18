@@ -31,10 +31,18 @@ body, html {
 } 
 
 .lp-btn {
-    background-color: rgba(184, 102, 187, 0.753);
+    background-color: #02000271;
     margin-top: 2%;
     float: right;
 }
+
+.lp-btn:hover,.lp-btn:active {
+    background-color: rgba(0, 5, 8, 0.836);
+    margin-top: 3%;
+    padding: auto 20px;
+}
+
+
 
 @media only screen and (max-width: 800px)
 {
