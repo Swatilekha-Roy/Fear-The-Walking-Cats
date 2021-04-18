@@ -28,19 +28,17 @@ class story{
         //let  i = 1;
         let scene;
         this.scene = scene;
+        this.scene = "1";
         box1.addEventListener('click', () => {
             //i= i+ 1;
             //textBox.textContent = myData[i];
-            this.scene = box1.textContent;
+
             console.log(this.scene);
-            if(this.scene == "Aye"){ 
-                this.scene = "Next"
-                this.scene_1();
-            }
-            else if(this.scene == "Next"){
-                this.scene = "asd";
-                this.scene_2();
-                
+            switch(this.scene){
+                case "1": this.scene_1();
+                break;
+                case "2":this.scene_2();
+                break;
             }
         })
         box2.addEventListener('click', () => {
@@ -54,15 +52,21 @@ class story{
     // Markets
     scene_1(){
         app.style.backgroundImage = "url('https://wallpaperaccess.com/full/1139963.jpg')";
-        textBox.textContent = myData[1];
-        box1.textContent = "Next";
-        box2.hidden;
-        box2.style.display = "none";
-        console.log('scene 1');
+        if(box1.textContent == "Aye"){
+            textBox.textContent = myData[1];
+            box1.textContent = "Next";
+            box2.hidden;
+            box2.style.display = "none";
+        }
+        else if(box1.textContent == "Next"){
+            textBox.textContent = myData[2];
+            box1.textContent = "What Voices?";
+            this.scene = "2";
+        }
     }
     scene_2(){
         app.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
-        textBox.textContent = myData[2];
+        textBox.textContent = myData[3];
         box1.textContent = "What Voices?";
         console.log("scene 3");
     }
