@@ -14,22 +14,21 @@
 }
 
 h1 {
-  font-size: 95px;
+  font-size: 4rem;
   color: #a34d4d;
   animation: text-flicker 3s linear infinite;
 }
 
 p {
-  font-size: 50px;
+  margin-top: 8%;
+  font-size: 2rem;
+  background-color: #520b0b;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
   color: white;
 }
 
-.questionContainer {
-  background-color: #520b0b;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin-bottom: 30px;
-}
 
 #text {
   color: white;
@@ -37,15 +36,24 @@ p {
 
 .buttons {
   padding: 10px 80px;
-  font-size: 40px;
-  border-radius: 30px;
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  border-radius: 15px;
 }
 
 .button1 {
+  background-color: #f1797981;
+}
+
+.button1:hover,.button1:focus,.button1:active {
   background-color: #f17979;
 }
 
 .button2 {
+  background-color: #aaaeb6c2;
+}
+
+.button2:hover,.button2:focus,.button2:active {
   background-color: #aaaeb6;
 }
 /* Text Animation */
