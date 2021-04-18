@@ -31,28 +31,45 @@ class story{
         box1.addEventListener('click', () => {
             //i= i+ 1;
             //textBox.textContent = myData[i];
-            scene = box1.textContent;
-            console.log(scene);
-            if(scene == "Aye")    
+            this.scene = box1.textContent;
+            console.log(this.scene);
+            if(this.scene == "Aye"){ 
+                this.scene = "Next"
                 this.scene_1();
+            }
+            else if(this.scene == "Next"){
+                this.scene = "asd";
+                this.scene_2();
+                
+            }
         })
         box2.addEventListener('click', () => {
-            textBox.textContent = 'nayy';    
+            if(this.scene == "Aye"){
+                textBox.textContent = 'nayy';    
+                app.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
+            }
         })
     }
 
     // Markets
     scene_1(){
         app.style.backgroundImage = "url('https://wallpaperaccess.com/full/1139963.jpg')";
+        textBox.textContent = myData[1];
+        box1.textContent = "Next";
+        box2.hidden;
+        box2.style.display = "none";
         console.log('scene 1');
     }
-    scene_3(){
-
+    scene_2(){
+        app.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
+        textBox.textContent = myData[2];
+        box1.textContent = "What Voices?";
+        console.log("scene 3");
     }
+    scene_3(){}
     scene_4(){}
     scene_5(){}
     scene_6(){}
-    scene_7(){}
 }
 
 
