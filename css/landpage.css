@@ -153,6 +153,9 @@ body, html {
    }
 }
 
+.fa-github:hover,.fa-github:focus,.fa-github:active {
+    color: #ffffff;
+}
 
 html {
     overflow: hidden;
