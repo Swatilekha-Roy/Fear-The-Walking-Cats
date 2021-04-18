@@ -4,7 +4,6 @@ let box2 = document.getElementById('button 2');
 let app = document.getElementById('body_');
 let myData;
 
-<<<<<<< HEAD
 let url_1 = 'http://127.0.0.1:5500/';
 
 class story{
@@ -23,15 +22,19 @@ class story{
     }
 
     // Ruins and Entrance
-    scene_1(){
+    sceneController(){
         app.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
         this.fun();
-        let  i = 1;
-
+        //let  i = 1;
+        let scene;
+        this.scene = scene;
         box1.addEventListener('click', () => {
-            i= i+ 1;
-            textBox.textContent = myData[i];    
-            app.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
+            //i= i+ 1;
+            //textBox.textContent = myData[i];
+            scene = box1.textContent;
+            console.log(scene);
+            if(scene == "Aye")    
+                this.scene_1();
         })
         box2.addEventListener('click', () => {
             textBox.textContent = 'nayy';    
@@ -39,59 +42,21 @@ class story{
     }
 
     // Markets
-    scene_2(){
-        box2.addEventListener('click', () => {
-        app.style.backgroundImage= "url('https://wallpaperaccess.com/full/1139963.jpg')";
-            textBox.textContent = 'nayy';    
-        })
+    scene_1(){
+        app.style.backgroundImage = "url('https://wallpaperaccess.com/full/1139963.jpg')";
+        console.log('scene 1');
     }
+    scene_3(){
+
+    }
+    scene_4(){}
+    scene_5(){}
+    scene_6(){}
+    scene_7(){}
 }
 
 
 //let name_1 = prompt('Please enter your name: ');
 let gameStory = new story('Nimit', textBox, box1, box2);
 gameStory.intro();
-gameStory.scene_1();
-gameStory.scene_2();
-// fetch(`${url}/data/story.json`)
-//   .then(response => response.json())
-//   .then(data => {
-//     myData = data;
-//     })
-//   .catch(err => console.log(error));
-
-//   let fun = async function fun (){
-//       let data = await fetch(`${url}/data/story.json`);
-//       data = await data.json();
-//       myData = data;
-//       console.log(data);
-//   }
-// fun();
-// console.log(`mydata: ${myData}`);
-// let  i = 1;
-
-// // box1.addEventListener('click', () => {
-// //     i= i+ 1;
-// //     textBox.textContent = myData[i];    
-// // })
-
-
-// box2.addEventListener('click', () => {
-//     textBox.textContent = 'nayy';    
-// })
-=======
-//the whole json part
-var mydata = JSON.parse(data);
-alert(mydata[0].name);
-alert(mydata[0].age);
-alert(mydata[1].name);
-alert(mydata[1].age);
-
-box1.addEventListener('click', () => {
-    textBox.textContent = 'some other text';    
-})
-box2.addEventListener('click', () => {
-    textBox.textContent = 'nayy';    
-})
-
->>>>>>> 149ce9f7de664d375bdf445122a0d9746b7127c1
+gameStory.sceneController();
