@@ -4,6 +4,7 @@ let box2 = document.getElementById('button 2');
 let app = document.getElementById('body_');
 let myData;
 
+<<<<<<< HEAD
 let url_1 = 'http://127.0.0.1:5500/';
 
 class story{
@@ -78,3 +79,19 @@ gameStory.scene_2();
 // box2.addEventListener('click', () => {
 //     textBox.textContent = 'nayy';    
 // })
+=======
+//the whole json part
+var mydata = JSON.parse(data);
+alert(mydata[0].name);
+alert(mydata[0].age);
+alert(mydata[1].name);
+alert(mydata[1].age);
+
+box1.addEventListener('click', () => {
+    textBox.textContent = 'some other text';    
+})
+box2.addEventListener('click', () => {
+    textBox.textContent = 'nayy';    
+})
+
+>>>>>>> 149ce9f7de664d375bdf445122a0d9746b7127c1
