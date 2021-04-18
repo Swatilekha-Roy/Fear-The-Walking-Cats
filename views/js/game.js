@@ -27,7 +27,9 @@ class story{
     // Ruins and Entrance
     sceneController_demo(){
         this.fun();
-        body_.style.backgroundImage= "url('https://dummyimage.com/1440x1080/000/fff&text=1')";
+        body_.style.backgroundImage= "url('https://www.pcgamesn.com/wp-content/uploads/2020/12/cyberpunk-2077-best-pc-settings-60fps.jpg')";
+        body_.style.backgroundRepeat= "no-repeat";
+        body_.style.backgroundSize= "cover";
         let scene;
         this.scene = scene;
         this.scene = "2";
@@ -60,7 +62,7 @@ class story{
     }
 
     sceneController(){
-        body_.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
+        body_.style.backgroundImage= "url('img/scene1.gif')";
         this.fun();
         this.scene_1();
         //let  i = 1;
@@ -85,19 +87,19 @@ class story{
         box2.addEventListener('click', () => {
             if(this.scene == "Aye"){
                 textBox.textContent = 'nayy';    
-                body_.style.backgroundImage= "url('https://wallpapercave.com/wp/wp5405231.jpg')";
+                body_.style.backgroundImage= "url('img/scene1.gif')";
             }
         })
     }
     // Markets
 
     scene_1(){
-        body_.style.backgroundImage= "url('https://dummyimage.com/1440x1080/000/fff&text=1')";
+        body_.style.backgroundImage= "url('img/scene2.png')";
         textBox.textContent = myData[1];
         console.log(myData[1]);
     }    
     scene_2(){
-        body_.style.backgroundImage= "url('https://dummyimage.com/1440x1080/000/fff&text=2')";
+        body_.style.backgroundImage= "url('https://wallpaperaccess.com/full/3703011.jpg')";
         textBox.textContent = myData[1];
         box1.textContent = "Next";
         box2.hidden;
@@ -107,7 +109,7 @@ class story{
         console.log(myData[1]);
     }
     scene_3(){
-        body_.style.backgroundImage= "url('https://dummyimage.com/1440x1080/000/fff&text=3')";
+        body_.style.backgroundImage= "url('https://wallpaperaccess.com/full/3703018.jpg')";
         textBox.textContent = myData[2];
         box1.textContent = "What Voices?";
         this.scene = "4";
